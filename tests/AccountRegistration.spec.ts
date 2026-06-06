@@ -1,6 +1,5 @@
 //TestCase - Account registration
 
-import { url } from "node:inspector"
 
 //Tags  - @master @sanity @regression
 
