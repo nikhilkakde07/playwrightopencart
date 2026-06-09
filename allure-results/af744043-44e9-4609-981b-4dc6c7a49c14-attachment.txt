@@ -1,0 +1,34 @@
+{
+  id: 8499262,
+  name: 'Nikhil',
+  email: 'nikhil1781029765919@gmail.com',
+  gender: 'male',
+  status: 'active'
+}
+Crearted user:8499262
+========================get call=====================
+{
+  id: 8499262,
+  name: 'Nikhil',
+  email: 'nikhil1781029765919@gmail.com',
+  gender: 'male',
+  status: 'active'
+}
+=============================put call==============================
+{
+  id: 8499262,
+  name: 'nikhkakde',
+  email: 'nikhil1781029765919@gmail.com',
+  gender: 'male',
+  status: 'inactive'
+}
+=============================Delete call =======================
+User is successfully deleted
+===============================Get call========================
+{
+  id: 8499262,
+  name: 'Nikhil',
+  email: 'nikhil1781029765919@gmail.com',
+  gender: 'male',
+  status: 'active'
+}

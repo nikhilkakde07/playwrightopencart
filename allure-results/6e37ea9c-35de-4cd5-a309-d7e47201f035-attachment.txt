@@ -1,0 +1,15 @@
+{
+  id: 8499219,
+  name: 'Nikhil',
+  email: 'nikhil1781028724690@gmail.com',
+  gender: 'male',
+  status: 'active'
+}
+Crearted user:8499219
+{
+  id: 8499219,
+  name: 'Nikhil',
+  email: 'nikhil1781028724690@gmail.com',
+  gender: 'male',
+  status: 'active'
+}

@@ -1,0 +1,752 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: codegentest.spec.ts >> test
+- Location: tests\codegentest.spec.ts:3:5
+
+# Error details
+
+```
+Error: expect(locator).toBeVisible() failed
+
+Locator: getByText('buses found')
+Expected: visible
+Error: strict mode violation: getByText('buses found') resolved to 2 elements:
+    1) <div role="status" aria-atomic="true" aria-relevant="all" aria-live="assertive" aria-label="Search results update" class="srOnly__ind-search-styles-module-scss-kZ0a5">481 buses found</div> aka getByRole('status', { name: 'Search results update' })
+    2) <div class="busesFoundText__ind-search-styles-module-scss-PHVGD">481 buses found</div> aka getByText('buses found').nth(1)
+
+Call log:
+  - Expect "toBeVisible" with timeout 5000ms
+  - waiting for getByText('buses found')
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - banner [ref=e4]:
+      - generic [ref=e5]:
+        - link "redBus logo" [ref=e6] [cursor=pointer]:
+          - /url: /
+          - img "redBus logo" [ref=e7]
+        - list [ref=e9]:
+          - listitem [ref=e10]:
+            - link "Bus tickets" [ref=e11] [cursor=pointer]:
+              - /url: https://www.redbus.in/bus-tickets
+              - img "Online Bus Tickets Booking" [ref=e12]
+              - generic [ref=e13]: Bus tickets
+          - listitem [ref=e14]:
+            - link "Train tickets" [ref=e15] [cursor=pointer]:
+              - /url: https://www.redbus.in/railways
+              - img "Online Train Tickets Booking" [ref=e16]
+              - generic [ref=e17]: Train tickets
+          - listitem [ref=e18]:
+            - link "Hotels" [ref=e19] [cursor=pointer]:
+              - /url: /hotels
+              - img "Online Hotel Booking" [ref=e20]
+              - generic [ref=e21]: Hotels
+        - navigation "Primary" [ref=e22]:
+          - list [ref=e23]:
+            - listitem [ref=e24]:
+              - link "Bookings" [ref=e25] [cursor=pointer]:
+                - /url: https://www.redbus.in/myprofile#trips
+                - generic [ref=e26]: 
+                - text: Bookings
+            - listitem [ref=e27]:
+              - link "Help" [ref=e28] [cursor=pointer]:
+                - /url: https://www.redbus.in/info/redcare
+                - generic [ref=e29]: 
+                - text: Help
+            - listitem [ref=e30]:
+              - button "Account" [ref=e31] [cursor=pointer]:
+                - generic [ref=e32]: 
+                - text: Account
+    - generic [ref=e33]:
+      - generic [ref=e35]:
+        - button "back" [ref=e37] [cursor=pointer]:
+          - generic [ref=e38]: 
+        - generic [ref=e39]:
+          - generic "Swargate, Pune to Mumbai" [ref=e41]:
+            - generic [ref=e42]:
+              - text: Swargate, Pune
+              - generic [ref=e43]: 
+              - text: Mumbai
+          - generic [ref=e44]: 481 buses
+      - generic [ref=e45]:
+        - status [ref=e46]
+        - generic [ref=e47]:
+          - img "redBus" [ref=e48] [cursor=pointer]
+          - generic [ref=e50]:
+            - generic [ref=e51]:
+              - combobox "Select From" [ref=e52] [cursor=pointer]:
+                - generic [ref=e53]:
+                  - generic [ref=e54]: 
+                  - generic [ref=e55]:
+                    - generic [ref=e56]: From
+                    - generic [ref=e57]: Swargate, Pune
+              - button "Swap source and destination" [ref=e58] [cursor=pointer]:
+                - img [ref=e59]
+            - combobox "Select To" [ref=e60] [cursor=pointer]:
+              - generic [ref=e61]:
+                - generic [ref=e62]: 
+                - generic [ref=e63]:
+                  - generic [ref=e64]: To
+                  - generic [ref=e65]: Mumbai
+            - generic [ref=e66]:
+              - 'button "Select Date of journey. Current date: 24 Jun, 2026" [ref=e67] [cursor=pointer]':
+                - generic [ref=e68]: 
+                - generic [ref=e69]:
+                  - generic [ref=e70]: Date of journey
+                  - generic [ref=e72]: 24 Jun, 2026
+              - generic [ref=e73]:
+                - button "Today" [ref=e75] [cursor=pointer]
+                - button "Tomorrow" [ref=e77] [cursor=pointer]
+            - button "Search buses" [ref=e79] [cursor=pointer]:
+              - generic [ref=e80]: 
+      - generic [ref=e83]:
+        - tab " Bus" [selected] [ref=e84] [cursor=pointer]:
+          - generic [ref=e85]: 
+          - generic [ref=e86]: Bus
+        - tab " Train" [ref=e87] [cursor=pointer]:
+          - generic [ref=e88]: 
+          - generic [ref=e89]: Train
+    - generic [ref=e93]:
+      - complementary "Filter buses" [ref=e94]:
+        - navigation "Filters" [ref=e95]:
+          - heading "Filter buses" [level=2] [ref=e97]
+          - generic [ref=e98]:
+            - generic [ref=e101]:
+              - generic [ref=e102]:
+                - img [ref=e103]
+                - generic [ref=e104]: AI Smart Filter
+              - textbox "Try “Morning bus under ₹1000”" [ref=e107]
+            - checkbox "Primo Bus (57) Free Cancellation (324) AC (403) SLEEPER (401) Single Seats (399) SEATER (160) NONAC (78) 18:00-24:00 (90) 06:00-12:00 (103) High Rated Buses (214) Live Tracking (327) Volvo Buses (48)" [ref=e109]:
+              - listitem [ref=e110]:
+                - button "Primo Bus (57)" [ref=e111] [cursor=pointer]:
+                  - generic [ref=e112]:
+                    - generic [ref=e113]: 
+                    - generic [ref=e114]: Primo Bus (57)
+              - listitem [ref=e115]:
+                - button "Free Cancellation (324)" [ref=e116] [cursor=pointer]:
+                  - generic [ref=e117]:
+                    - generic [ref=e118]: 
+                    - generic [ref=e119]: Free Cancellation (324)
+              - listitem [ref=e120]:
+                - button "AC (403)" [ref=e121] [cursor=pointer]:
+                  - generic [ref=e122]:
+                    - generic [ref=e123]: 
+                    - generic [ref=e124]: AC (403)
+              - listitem [ref=e125]:
+                - button "SLEEPER (401)" [ref=e126] [cursor=pointer]:
+                  - generic [ref=e127]:
+                    - generic [ref=e128]: 
+                    - generic [ref=e129]: SLEEPER (401)
+              - listitem [ref=e130]:
+                - button "Single Seats (399)" [ref=e131] [cursor=pointer]:
+                  - generic [ref=e132]:
+                    - generic [ref=e133]: 
+                    - generic [ref=e134]: Single Seats (399)
+              - listitem [ref=e135]:
+                - button "SEATER (160)" [ref=e136] [cursor=pointer]:
+                  - generic [ref=e137]:
+                    - generic [ref=e138]: 
+                    - generic [ref=e139]: SEATER (160)
+              - listitem [ref=e140]:
+                - button "NONAC (78)" [ref=e141] [cursor=pointer]:
+                  - generic [ref=e142]:
+                    - generic [ref=e143]: 
+                    - generic [ref=e144]: NONAC (78)
+              - listitem [ref=e145]:
+                - button "18:00-24:00 (90)" [ref=e146] [cursor=pointer]:
+                  - generic [ref=e147]:
+                    - generic [ref=e148]: 
+                    - generic [ref=e149]: 18:00-24:00 (90)
+              - listitem [ref=e150]:
+                - button "06:00-12:00 (103)" [ref=e151] [cursor=pointer]:
+                  - generic [ref=e152]:
+                    - generic [ref=e153]: 
+                    - generic [ref=e154]: 06:00-12:00 (103)
+              - listitem [ref=e155]:
+                - button "High Rated Buses (214)" [ref=e156] [cursor=pointer]:
+                  - generic [ref=e157]:
+                    - generic [ref=e158]: 
+                    - generic [ref=e159]: High Rated Buses (214)
+              - listitem [ref=e160]:
+                - button "Live Tracking (327)" [ref=e161] [cursor=pointer]:
+                  - generic [ref=e162]:
+                    - generic [ref=e163]: 
+                    - generic [ref=e164]: Live Tracking (327)
+              - listitem [ref=e165]:
+                - button "Volvo Buses (48)" [ref=e166] [cursor=pointer]:
+                  - generic [ref=e167]:
+                    - generic [ref=e168]: 
+                    - generic [ref=e169]: Volvo Buses (48)
+            - group "Filter Buses" [ref=e170]:
+              - button "Departure time from source" [ref=e171] [cursor=pointer]:
+                - heading "Departure time from source" [level=3] [ref=e173]
+                - generic [ref=e174]: 
+            - group "Filter Buses" [ref=e175]:
+              - button "Arrival time at destination" [ref=e176] [cursor=pointer]:
+                - heading "Arrival time at destination" [level=3] [ref=e178]
+                - generic [ref=e179]: 
+            - group "Filter Buses" [ref=e180]:
+              - button "Bus type" [ref=e181] [cursor=pointer]:
+                - heading "Bus type" [level=3] [ref=e183]
+                - generic [ref=e184]: 
+            - group "Filter Buses" [ref=e185]:
+              - button "Single window seater/sleeper" [ref=e186] [cursor=pointer]:
+                - heading "Single window seater/sleeper" [level=3] [ref=e188]
+                - generic [ref=e189]: 
+            - group "Filter Buses" [ref=e190]:
+              - button "Bus features" [ref=e191] [cursor=pointer]:
+                - heading "Bus features" [level=3] [ref=e193]
+                - generic [ref=e194]: 
+            - group "Filter Buses" [ref=e195]:
+              - button "Bus operator" [ref=e196] [cursor=pointer]:
+                - heading "Bus operator" [level=2] [ref=e198]
+                - generic [ref=e199]: 
+            - button "Boarding points" [ref=e201] [cursor=pointer]:
+              - heading "Boarding points" [level=2] [ref=e203]
+              - generic [ref=e204]: 
+            - button "Dropping points" [ref=e206] [cursor=pointer]:
+              - heading "Dropping points" [level=2] [ref=e208]
+              - generic [ref=e209]: 
+            - group "Filter Buses" [ref=e210]:
+              - button "Amenities" [ref=e211] [cursor=pointer]:
+                - heading "Amenities" [level=2] [ref=e213]
+                - generic [ref=e214]: 
+            - group "Filter Buses" [ref=e215]:
+              - button "Special bus features" [ref=e216] [cursor=pointer]:
+                - heading "Special bus features" [level=3] [ref=e218]
+                - generic [ref=e219]: 
+            - group "Filter Buses" [ref=e220]:
+              - button "RTC bus type" [ref=e221] [cursor=pointer]:
+                - heading "RTC bus type" [level=3] [ref=e223]
+                - generic [ref=e224]: 
+      - generic [ref=e225]:
+        - region [ref=e227]:
+          - img "oipCard_9748" [ref=e230] [cursor=pointer]
+          - img "oipCard_555" [ref=e233] [cursor=pointer]
+          - img "oipCard_86" [ref=e236] [cursor=pointer]
+          - img "oipCard_73" [ref=e239] [cursor=pointer]
+          - img "oipCard_3" [ref=e242] [cursor=pointer]
+          - img "oipCard_7" [ref=e245] [cursor=pointer]
+          - img "oipCard_4" [ref=e248] [cursor=pointer]
+          - img "oipCard_15" [ref=e251] [cursor=pointer]
+        - status "Carousel navigation status" [ref=e252]
+        - status "Search results update" [ref=e253]: 481 buses found
+        - generic [ref=e254]:
+          - generic [ref=e255]: 481 buses found
+          - group "Sort by:" [ref=e256]:
+            - generic [ref=e257]: "Sort by:"
+            - radiogroup "Sort by" [ref=e258]:
+              - radio "Ratings" [ref=e259] [cursor=pointer]:
+                - generic [ref=e260]: Ratings
+              - radio "Departure time" [ref=e261] [cursor=pointer]:
+                - generic [ref=e262]: Departure time
+              - radio "Price" [ref=e263] [cursor=pointer]:
+                - generic [ref=e264]: Price
+        - generic [ref=e267]: 3.6+ lakh bus routes on redBus
+        - generic [ref=e269]:
+          - generic [ref=e272] [cursor=pointer]:
+            - generic [ref=e278]: Get 10% Discount on Return Trip booking
+            - generic [ref=e279]:
+              - generic [ref=e280]:
+                - img "KSRTC Karnataka" [ref=e281]
+                - generic [ref=e282]:
+                  - generic [ref=e283]:
+                    - generic [ref=e284]: KSRTC Karnataka
+                    - generic [ref=e285]: ಕರ್ನಾಟಕ ರಾಜ್ಯ ರಸ್ತೆ ಸಾರಿಗೆ ಸಂಸ್ಥೆ
+                  - generic [ref=e286]:
+                    - generic [ref=e287]: 1 buses
+                    - text: starting from
+                    - generic [ref=e288]: ₹304
+              - button "Show buses" [ref=e290]
+          - list [ref=e293]:
+            - button "Neeta tours and travels, Bharat Benz A/C Seater (2+1). Departs 07:15, arrives 11:55. Duration 4h 40m. Available seats 31 Seats. Price 550 INR. Rated 4.6 out of 5. Total reviewers 554. Live tracking, On Time, Via Missing Link" [ref=e294] [cursor=pointer]:
+              - paragraph [ref=e296]: Direct Bus
+              - img "hero img" [ref=e300]
+              - generic [ref=e301]:
+                - generic [ref=e302]:
+                  - generic [ref=e303]:
+                    - paragraph [ref=e304]: 07:15
+                    - paragraph [ref=e306]: 11:55
+                  - generic [ref=e307]:
+                    - paragraph [ref=e308]: 4h 40m
+                    - generic [ref=e310]:
+                      - paragraph [ref=e311]: 31 Seats
+                      - paragraph [ref=e312]: (9 Single)
+                - generic [ref=e313]:
+                  - paragraph [ref=e315]: ₹550
+                  - paragraph [ref=e316]: Onwards
+                - generic [ref=e318]:
+                  - generic [ref=e319]:
+                    - generic [ref=e320]: Neeta tours and travels
+                    - generic [ref=e322]: 
+                  - paragraph [ref=e324]: Bharat Benz A/C Seater (2+1)
+                - generic "4.6 star rating, 554 ratings" [ref=e326]:
+                  - generic [ref=e328]:
+                    - generic [ref=e329]: 
+                    - generic [ref=e330]: "4.6"
+                  - generic [ref=e331]: "554"
+              - generic [ref=e333]:  
+              - generic [ref=e335]:
+                - listitem [ref=e336]:
+                  - generic [ref=e337]: On Time
+                - listitem [ref=e338]:
+                  - generic [ref=e339]: Via Missing Link
+              - button "View seats for Neeta tours and travels" [ref=e340]: View seats
+            - button "Neeta tours and travels, Bharat Benz A/C Seater (2+1). Departs 08:30, arrives 13:10. Duration 4h 40m. Available seats 31 Seats. Price 550 INR. Rated 4.5 out of 5. Total reviewers 439. Live tracking, On Time, Via Missing Link" [ref=e341] [cursor=pointer]:
+              - paragraph [ref=e343]: Direct Bus
+              - img "hero img" [ref=e347]
+              - generic [ref=e348]:
+                - generic [ref=e349]:
+                  - generic [ref=e350]:
+                    - paragraph [ref=e351]: 08:30
+                    - paragraph [ref=e353]: 13:10
+                  - generic [ref=e354]:
+                    - paragraph [ref=e355]: 4h 40m
+                    - generic [ref=e357]:
+                      - paragraph [ref=e358]: 31 Seats
+                      - paragraph [ref=e359]: (9 Single)
+                - generic [ref=e360]:
+                  - paragraph [ref=e362]: ₹550
+                  - paragraph [ref=e363]: Onwards
+                - generic [ref=e365]:
+                  - generic [ref=e366]:
+                    - generic [ref=e367]: Neeta tours and travels
+                    - generic [ref=e369]: 
+                  - paragraph [ref=e371]: Bharat Benz A/C Seater (2+1)
+                - generic "4.5 star rating, 439 ratings" [ref=e373]:
+                  - generic [ref=e375]:
+                    - generic [ref=e376]: 
+                    - generic [ref=e377]: "4.5"
+                  - generic [ref=e378]: "439"
+              - generic [ref=e380]:  
+              - generic [ref=e382]:
+                - listitem [ref=e383]:
+                  - generic [ref=e384]: On Time
+                - listitem [ref=e385]:
+                  - generic [ref=e386]: Via Missing Link
+              - button "View seats for Neeta tours and travels" [ref=e387]: View seats
+            - button "Purple Bus - Metrolink, Electric A/C Seater (2+2). Departs 15:30, arrives 21:05. Duration 5h 35m. Available seats 30 Seats. Price 500 INR. Rated 4.5 out of 5. Total reviewers 352. Live tracking, Electric, Via Missing Link" [ref=e388] [cursor=pointer]:
+              - paragraph [ref=e390]: Direct Bus
+              - generic [ref=e391]:
+                - generic [ref=e392]:
+                  - generic [ref=e393]:
+                    - paragraph [ref=e394]: 15:30
+                    - paragraph [ref=e396]: 21:05
+                  - generic [ref=e397]:
+                    - paragraph [ref=e398]: 5h 35m
+                    - paragraph [ref=e401]: 30 Seats
+                - generic [ref=e402]:
+                  - paragraph [ref=e404]: ₹500
+                  - paragraph [ref=e405]: Onwards
+                - generic [ref=e407]:
+                  - generic [ref=e408]:
+                    - generic [ref=e409]: Purple Bus - Metrolink
+                    - generic [ref=e411]: 
+                  - generic [ref=e412]:
+                    - img "ev" [ref=e413]
+                    - paragraph [ref=e414]: Electric A/C Seater (2+2)
+                - generic "4.5 star rating, 352 ratings" [ref=e416]:
+                  - generic [ref=e418]:
+                    - generic [ref=e419]: 
+                    - generic [ref=e420]: "4.5"
+                  - generic [ref=e421]: "352"
+              - generic [ref=e423]:  
+              - listitem [ref=e426]:
+                - generic [ref=e427]: Via Missing Link
+              - button "View seats for Purple Bus - Metrolink" [ref=e428]: View seats
+            - button "Purple Bus - Metrolink, Electric A/C Seater (2+2). Departs 05:30, arrives 09:30. Duration 4h. Available seats 30 Seats. Price 500 INR. Rated 4.7 out of 5. Total reviewers 116. Live tracking, Electric, New Bus, Direct Bus" [ref=e429] [cursor=pointer]:
+              - paragraph [ref=e431]: Direct Bus
+              - generic [ref=e432]:
+                - generic [ref=e433]:
+                  - generic [ref=e434]:
+                    - paragraph [ref=e435]: 05:30
+                    - paragraph [ref=e437]: 09:30
+                  - generic [ref=e438]:
+                    - paragraph [ref=e439]: 4h
+                    - paragraph [ref=e442]: 30 Seats
+                - generic [ref=e443]:
+                  - paragraph [ref=e445]: ₹500
+                  - paragraph [ref=e446]: Onwards
+                - generic [ref=e448]:
+                  - generic [ref=e449]:
+                    - generic [ref=e450]: Purple Bus - Metrolink
+                    - generic [ref=e452]: 
+                  - generic [ref=e453]:
+                    - img "ev" [ref=e454]
+                    - paragraph [ref=e455]: Electric A/C Seater (2+2)
+                - generic "4.7 star rating, 116 ratings" [ref=e457]:
+                  - generic [ref=e459]:
+                    - generic [ref=e460]: 
+                    - generic [ref=e461]: "4.7"
+                  - generic [ref=e462]: "116"
+              - generic [ref=e464]:  
+              - generic [ref=e466]:
+                - listitem [ref=e467]:
+                  - generic [ref=e468]: New Bus
+                - listitem [ref=e469]:
+                  - generic [ref=e470]: Direct Bus
+              - button "View seats for Purple Bus - Metrolink" [ref=e471]: View seats
+            - generic [ref=e472]:
+              - generic [ref=e473]:
+                - img "primoLogo" [ref=e474]
+                - generic [ref=e475]: Wednesdays
+              - generic [ref=e479]:
+                - generic [ref=e481]:
+                  - heading "Extra 10% OFF" [level=4] [ref=e482]
+                  - generic [ref=e483]: Up to ₹200. Apply code on payment page
+                - generic [ref=e484] [cursor=pointer]:
+                  - generic [ref=e485]: PRIMODAY
+                  - generic [ref=e486]: 
+              - generic [ref=e487]: Special offer on all Primo buses
+            - button "Purple Bus - Metrolink, Electric A/C Seater (2+2). Departs 06:00, arrives 10:00. Duration 4h. Available seats 29 Seats. Price 500 INR. Rated 4.5 out of 5. Total reviewers 293. Live tracking, Electric, Via Atal Setu MTHL, Via Missing Link" [ref=e488] [cursor=pointer]:
+              - paragraph [ref=e490]: Direct Bus
+              - generic [ref=e491]:
+                - generic [ref=e492]:
+                  - generic [ref=e493]:
+                    - paragraph [ref=e494]: 06:00
+                    - paragraph [ref=e496]: 10:00
+                  - generic [ref=e497]:
+                    - paragraph [ref=e498]: 4h
+                    - paragraph [ref=e501]: 29 Seats
+                - generic [ref=e502]:
+                  - paragraph [ref=e504]: ₹500
+                  - paragraph [ref=e505]: Onwards
+                - generic [ref=e507]:
+                  - generic [ref=e508]:
+                    - generic [ref=e509]: Purple Bus - Metrolink
+                    - generic [ref=e511]: 
+                  - generic [ref=e512]:
+                    - img "ev" [ref=e513]
+                    - paragraph [ref=e514]: Electric A/C Seater (2+2)
+                - generic "4.5 star rating, 293 ratings" [ref=e516]:
+                  - generic [ref=e518]:
+                    - generic [ref=e519]: 
+                    - generic [ref=e520]: "4.5"
+                  - generic [ref=e521]: "293"
+              - generic [ref=e523]:  
+              - generic [ref=e525]:
+                - listitem [ref=e526]:
+                  - generic [ref=e527]: Via Atal Setu MTHL
+                - listitem [ref=e528]:
+                  - generic [ref=e529]: Via Missing Link
+              - button "View seats for Purple Bus - Metrolink" [ref=e530]: View seats
+            - button "Neeta tours and travels, Bharat Benz A/C Seater (2+2). Departs 16:30, arrives 21:55. Duration 5h 25m. Available seats 37 Seats. Price 550 INR. Rated 4.4 out of 5. Total reviewers 486. Live tracking, Via Missing Link" [ref=e531] [cursor=pointer]:
+              - paragraph [ref=e533]: Direct Bus
+              - img "hero img" [ref=e537]
+              - generic [ref=e538]:
+                - generic [ref=e539]:
+                  - generic [ref=e540]:
+                    - paragraph [ref=e541]: 16:30
+                    - paragraph [ref=e543]: 21:55
+                  - generic [ref=e544]:
+                    - paragraph [ref=e545]: 5h 25m
+                    - paragraph [ref=e548]: 37 Seats
+                - generic [ref=e549]:
+                  - paragraph [ref=e551]: ₹550
+                  - paragraph [ref=e552]: Onwards
+                - generic [ref=e554]:
+                  - generic [ref=e555]:
+                    - generic [ref=e556]: Neeta tours and travels
+                    - generic [ref=e558]: 
+                  - paragraph [ref=e560]: Bharat Benz A/C Seater (2+2)
+                - generic "4.4 star rating, 486 ratings" [ref=e562]:
+                  - generic [ref=e564]:
+                    - generic [ref=e565]: 
+                    - generic [ref=e566]: "4.4"
+                  - generic [ref=e567]: "486"
+              - generic [ref=e569]:  
+              - listitem [ref=e572]:
+                - generic [ref=e573]: Via Missing Link
+              - button "View seats for Neeta tours and travels" [ref=e574]: View seats
+            - button "Maharaja Paulo Travels, Bharat Benz A/C Sleeper (2+1). Departs 21:40, arrives 02:05. Duration 4h 25m. Available seats 38 Seats. Price 918 INR. Rated 4.3 out of 5. Total reviewers 53. Live tracking, 12.5% OFF, Free bus change, Exclusive discounts available for women passengers" [ref=e575] [cursor=pointer]:
+              - generic [ref=e576]:
+                - img "hero img" [ref=e579]
+                - button "Try new 12.5% OFF" [ref=e580]:
+                  - generic [ref=e581]:
+                    - generic [ref=e582]: Try new
+                    - generic [ref=e583]: 12.5% OFF
+              - generic [ref=e584]:
+                - generic [ref=e585]:
+                  - generic [ref=e586]:
+                    - paragraph [ref=e587]: 21:40
+                    - paragraph [ref=e589]: 02:05
+                  - generic [ref=e590]:
+                    - paragraph [ref=e591]: 4h 25m
+                    - generic [ref=e593]:
+                      - paragraph [ref=e594]: 38 Seats
+                      - paragraph [ref=e595]: (12 Single)
+                - generic [ref=e596]:
+                  - generic [ref=e597]:
+                    - paragraph [ref=e598]: ₹1,049
+                    - paragraph [ref=e599]: ₹918
+                  - paragraph [ref=e600]: Onwards
+                - generic [ref=e602]:
+                  - generic [ref=e603]:
+                    - generic [ref=e604]: Maharaja Paulo Travels
+                    - generic [ref=e606]: 
+                  - paragraph [ref=e608]: Bharat Benz A/C Sleeper (2+1)
+                - generic "4.3 star rating, 53 ratings" [ref=e610]:
+                  - generic [ref=e612]:
+                    - generic [ref=e613]: 
+                    - generic [ref=e614]: "4.3"
+                  - generic [ref=e615]: "53"
+              - generic [ref=e617]:  
+              - listitem [ref=e620]:
+                - generic [ref=e621]: 
+                - generic [ref=e622]: Free bus change
+              - generic [ref=e624]: Exclusive discounts available for women passengers
+              - button "View seats for Maharaja Paulo Travels" [ref=e625]: View seats
+            - generic [ref=e626]:
+              - img "FCGradient"
+              - generic [ref=e627]:
+                - img [ref=e628]
+                - generic [ref=e629]:
+                  - heading "Travel plans might change" [level=4] [ref=e630]
+                  - generic [ref=e631]:
+                    - generic [ref=e632]: Add
+                    - generic [ref=e633]: Free Cancellation
+                    - generic [ref=e634]: to get full refund
+              - switch "Only show buses that provide Free Cancellation" [ref=e635] [cursor=pointer]:
+                - generic [ref=e638]: Only show buses that provide Free Cancellation
+                - switch [ref=e641]:
+                  - checkbox [ref=e642]
+            - button "Neeta tours and travels, Bharat Benz A/C Seater (2+2). Departs 23:15, arrives 03:40. Duration 4h 25m. Available seats 37 Seats. Price 550 INR. Rated 4.4 out of 5. Total reviewers 447. Live tracking, On Time, Via Missing Link" [ref=e643] [cursor=pointer]:
+              - paragraph [ref=e645]: Direct Bus
+              - img "hero img" [ref=e649]
+              - generic [ref=e650]:
+                - generic [ref=e651]:
+                  - generic [ref=e652]:
+                    - paragraph [ref=e653]: 23:15
+                    - paragraph [ref=e655]: 03:40
+                  - generic [ref=e656]:
+                    - paragraph [ref=e657]: 4h 25m
+                    - paragraph [ref=e660]: 37 Seats
+                - generic [ref=e661]:
+                  - paragraph [ref=e663]: ₹550
+                  - paragraph [ref=e664]: Onwards
+                - generic [ref=e666]:
+                  - generic [ref=e667]:
+                    - generic [ref=e668]: Neeta tours and travels
+                    - generic [ref=e670]: 
+                  - paragraph [ref=e672]: Bharat Benz A/C Seater (2+2)
+                - generic "4.4 star rating, 447 ratings" [ref=e674]:
+                  - generic [ref=e676]:
+                    - generic [ref=e677]: 
+                    - generic [ref=e678]: "4.4"
+                  - generic [ref=e679]: "447"
+              - generic [ref=e681]:  
+              - generic [ref=e683]:
+                - listitem [ref=e684]:
+                  - generic [ref=e685]: On Time
+                - listitem [ref=e686]:
+                  - generic [ref=e687]: Via Missing Link
+              - button "View seats for Neeta tours and travels" [ref=e688]: View seats
+            - button "Neeta tours and travels, Bharat Benz A/C Seater (2+1). Departs 13:30, arrives 18:30. Duration 5h. Available seats 30 Seats. Price 550 INR. Rated 4.4 out of 5. Total reviewers 418. Live tracking, Via Missing Link" [ref=e689] [cursor=pointer]:
+              - paragraph [ref=e691]: Direct Bus
+              - img "hero img" [ref=e695]
+              - generic [ref=e696]:
+                - generic [ref=e697]:
+                  - generic [ref=e698]:
+                    - paragraph [ref=e699]: 13:30
+                    - paragraph [ref=e701]: 18:30
+                  - generic [ref=e702]:
+                    - paragraph [ref=e703]: 5h
+                    - generic [ref=e705]:
+                      - paragraph [ref=e706]: 30 Seats
+                      - paragraph [ref=e707]: (8 Single)
+                - generic [ref=e708]:
+                  - paragraph [ref=e710]: ₹550
+                  - paragraph [ref=e711]: Onwards
+                - generic [ref=e713]:
+                  - generic [ref=e714]:
+                    - generic [ref=e715]: Neeta tours and travels
+                    - generic [ref=e717]: 
+                  - paragraph [ref=e719]: Bharat Benz A/C Seater (2+1)
+                - generic "4.4 star rating, 418 ratings" [ref=e721]:
+                  - generic [ref=e723]:
+                    - generic [ref=e724]: 
+                    - generic [ref=e725]: "4.4"
+                  - generic [ref=e726]: "418"
+              - generic [ref=e728]:  
+              - listitem [ref=e731]:
+                - generic [ref=e732]: Via Missing Link
+              - button "View seats for Neeta tours and travels" [ref=e733]: View seats
+            - button "Neeta tours and travels, Bharat Benz A/C Seater (2+2). Departs 18:30, arrives 23:54. Duration 5h 24m. Available seats 37 Seats. Price 550 INR. Rated 4.3 out of 5. Total reviewers 494. Live tracking, Via Missing Link" [ref=e734] [cursor=pointer]:
+              - paragraph [ref=e736]: Direct Bus
+              - img "hero img" [ref=e740]
+              - generic [ref=e741]:
+                - generic [ref=e742]:
+                  - generic [ref=e743]:
+                    - paragraph [ref=e744]: 18:30
+                    - paragraph [ref=e746]: 23:54
+                  - generic [ref=e747]:
+                    - paragraph [ref=e748]: 5h 24m
+                    - paragraph [ref=e751]: 37 Seats
+                - generic [ref=e752]:
+                  - paragraph [ref=e754]: ₹550
+                  - paragraph [ref=e755]: Onwards
+                - generic [ref=e757]:
+                  - generic [ref=e758]:
+                    - generic [ref=e759]: Neeta tours and travels
+                    - generic [ref=e761]: 
+                  - paragraph [ref=e763]: Bharat Benz A/C Seater (2+2)
+                - generic "4.3 star rating, 494 ratings" [ref=e765]:
+                  - generic [ref=e767]:
+                    - generic [ref=e768]: 
+                    - generic [ref=e769]: "4.3"
+                  - generic [ref=e770]: "494"
+              - generic [ref=e772]:  
+              - listitem [ref=e775]:
+                - generic [ref=e776]: Via Missing Link
+              - button "View seats for Neeta tours and travels" [ref=e777]: View seats
+    - button "Open chat support" [ref=e778] [cursor=pointer]:
+      - img
+      - generic [ref=e779]: Ask RAY
+  - generic [ref=e782]:
+    - navigation "Footer links" [ref=e783]:
+      - generic [ref=e784]:
+        - navigation "secondary" [ref=e785]:
+          - generic [ref=e787]:
+            - heading "About redBus" [level=2] [ref=e788]
+            - list [ref=e789]:
+              - listitem [ref=e790]:
+                - link "Contact us" [ref=e791] [cursor=pointer]:
+                  - /url: https://www.redbus.in/info/contactus
+              - listitem [ref=e792]:
+                - link "Sitemap" [ref=e793] [cursor=pointer]:
+                  - /url: https://www.redbus.in/sitemap.html
+              - listitem [ref=e794]:
+                - link "Offers" [ref=e795] [cursor=pointer]:
+                  - /url: https://www.redbus.in/offers
+              - listitem [ref=e796]:
+                - link "Careers" [ref=e797] [cursor=pointer]:
+                  - /url: https://www.redbus.in/careers
+        - navigation "secondary" [ref=e798]:
+          - generic [ref=e800]:
+            - heading "Info" [level=2] [ref=e801]
+            - list [ref=e802]:
+              - listitem [ref=e803]:
+                - link "T&C" [ref=e804] [cursor=pointer]:
+                  - /url: https://www.redbus.in/info/termscondition
+              - listitem [ref=e805]:
+                - link "Privacy policy" [ref=e806] [cursor=pointer]:
+                  - /url: https://www.redbus.in/info/privacypolicy
+              - listitem [ref=e807]:
+                - link "Blog" [ref=e808] [cursor=pointer]:
+                  - /url: https://blog.redbus.in
+              - listitem [ref=e809]:
+                - link "Bus operator registration" [ref=e810] [cursor=pointer]:
+                  - /url: https://onboardvendor.redbus.in/
+              - listitem [ref=e811]:
+                - link "Agent registration" [ref=e812] [cursor=pointer]:
+                  - /url: https://in3.seatseller.travel/
+              - listitem [ref=e813]:
+                - link "Insurance partner" [ref=e814] [cursor=pointer]:
+                  - /url: https://www.acko.com/
+              - listitem [ref=e815]:
+                - link "User agreement" [ref=e816] [cursor=pointer]:
+                  - /url: https://www.redbus.in/info/useragreement
+              - listitem [ref=e817]:
+                - link "Primo Bus" [ref=e818] [cursor=pointer]:
+                  - /url: https://www.redbus.in/primo/primo-service
+              - listitem [ref=e819]:
+                - link "Bus Timetable" [ref=e820] [cursor=pointer]:
+                  - /url: https://www.redbus.in/bus-timetable
+              - listitem [ref=e821]:
+                - link "Report Security Issues" [ref=e822] [cursor=pointer]:
+                  - /url: " https://www.redbus.in/bugbounty"
+        - navigation "secondary" [ref=e823]:
+          - generic [ref=e825]:
+            - heading "Global Sites" [level=2] [ref=e826]
+            - list [ref=e827]:
+              - listitem [ref=e828]:
+                - link "India" [ref=e829] [cursor=pointer]:
+                  - /url: https://www.redbus.in/
+              - listitem [ref=e830]:
+                - link "Singapore" [ref=e831] [cursor=pointer]:
+                  - /url: https://www.redbus.sg/
+              - listitem [ref=e832]:
+                - link "Malaysia" [ref=e833] [cursor=pointer]:
+                  - /url: https://www.redbus.my/
+              - listitem [ref=e834]:
+                - link "Indonesia" [ref=e835] [cursor=pointer]:
+                  - /url: https://www.redbus.id/
+              - listitem [ref=e836]:
+                - link "Peru" [ref=e837] [cursor=pointer]:
+                  - /url: https://www.redbus.pe/
+              - listitem [ref=e838]:
+                - link "Colombia" [ref=e839] [cursor=pointer]:
+                  - /url: https://www.redbus.co/
+              - listitem [ref=e840]:
+                - link "Cambodia" [ref=e841] [cursor=pointer]:
+                  - /url: https://www.redbus.com.kh/
+              - listitem [ref=e842]:
+                - link "Vietnam" [ref=e843] [cursor=pointer]:
+                  - /url: https://www.redbus.vn/
+        - navigation "secondary" [ref=e844]:
+          - generic [ref=e846]:
+            - heading "Our Partners" [level=2] [ref=e847]
+            - list [ref=e848]:
+              - listitem [ref=e849]:
+                - link "Goibibo Bus" [ref=e850] [cursor=pointer]:
+                  - /url: https://www.goibibo.com/bus/
+              - listitem [ref=e851]:
+                - link "Goibibo Hotels" [ref=e852] [cursor=pointer]:
+                  - /url: https://www.goibibo.com/hotels/
+              - listitem [ref=e853]:
+                - link "Makemytrip Hotels" [ref=e854] [cursor=pointer]:
+                  - /url: https://www.makemytrip.com/hotels/
+    - generic [ref=e855]:
+      - img "redBus Logo" [ref=e856]
+      - generic [ref=e857]: redBus is the world's largest online bus ticket booking service trusted by over 56+ million happy customers globally. redBus offers bus ticket booking through its website, iOS and Android mobile apps for all major routes.
+    - generic [ref=e858]:
+      - generic [ref=e859]: Ⓒ 2026 MAKEMYTRIP (INDIA) PRIVATE LIMITED. All rights reserved
+      - list [ref=e860]:
+        - listitem [ref=e861]:
+          - link "redbus_facebook" [ref=e862] [cursor=pointer]:
+            - /url: https://www.facebook.com/redbus.in/
+            - img "redbus_facebook" [ref=e863]
+        - listitem [ref=e864]:
+          - link "redbus_linkedin" [ref=e865] [cursor=pointer]:
+            - /url: https://in.linkedin.com/company/redbus_2/
+            - img "redbus_linkedin" [ref=e866]
+        - listitem [ref=e867]:
+          - link "redbus_twitter" [ref=e868] [cursor=pointer]:
+            - /url: https://twitter.com/redBus_in/
+            - img "redbus_twitter" [ref=e869]
+        - listitem [ref=e870]:
+          - link "redbus_instagram" [ref=e871] [cursor=pointer]:
+            - /url: https://www.instagram.com/accounts/login/?next=/redbusindia/
+            - img "redbus_instagram" [ref=e872]
+```
+
+# Test source
+
+```ts
+  1  | import { test, expect } from '@playwright/test';
+  2  | 
+  3  | test('test', async ({ page }) => {
+  4  |   await page.goto('https://www.redbus.in/');
+  5  |   await page.getByRole('combobox', { name: 'From' }).fill('pune');
+  6  |   await page.getByRole('heading', { name: 'Swargate, Pune' }).click();
+  7  |   await page.getByRole('heading', { name: 'Mumbai' }).click();
+  8  |   await page.getByRole('combobox', { name: 'Select Date of Journey.' }).click();
+  9  |   await page.getByRole('button', { name: 'Wednesday, June 24,' }).click();
+  10 |   await page.getByLabel('', { exact: true }).check();
+  11 |   await page.getByLabel('Got it').click();
+  12 |   await page.getByRole('button', { name: 'Search buses' }).click();
+> 13 |   await expect (page.getByText('buses found')).toBeVisible()
+     |                                                ^ Error: expect(locator).toBeVisible() failed
+  14 | });
+```

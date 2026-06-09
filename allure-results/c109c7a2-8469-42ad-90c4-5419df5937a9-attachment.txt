@@ -1,0 +1,72 @@
+[
+  {
+    id: 8499041,
+    name: 'nikhil',
+    email: 'nikhil1781021566877@gmail.com',
+    gender: 'male',
+    status: 'active'
+  },
+  {
+    id: 8499040,
+    name: 'nikhil',
+    email: 'nikhil1781021565438@gmail.com',
+    gender: 'male',
+    status: 'active'
+  },
+  {
+    id: 8498863,
+    name: 'nikhil',
+    email: 'jbhfksdjhf@gmail.com',
+    gender: 'female',
+    status: 'active'
+  },
+  {
+    id: 8498845,
+    name: 'Avani Iyer',
+    email: 'avaccni.iyer@example.com',
+    gender: 'female',
+    status: 'active'
+  },
+  {
+    id: 8498844,
+    name: 'Avani Iyer',
+    email: 'avani.iyeddr@example.com',
+    gender: 'female',
+    status: 'active'
+  },
+  {
+    id: 8496206,
+    name: 'Chandraswaroopa Achari',
+    email: 'achari_chandraswaroopa@moore.test',
+    gender: 'female',
+    status: 'active'
+  },
+  {
+    id: 8496205,
+    name: 'Chandan Bhattacharya',
+    email: 'bhattacharya_chandan@farrell.test',
+    gender: 'female',
+    status: 'active'
+  },
+  {
+    id: 8496204,
+    name: 'Chakradhar Sethi',
+    email: 'chakradhar_sethi@predovic.test',
+    gender: 'female',
+    status: 'inactive'
+  },
+  {
+    id: 8496203,
+    name: 'Dayaamay Nehru',
+    email: 'nehru_dayaamay@cartwright.example',
+    gender: 'female',
+    status: 'inactive'
+  },
+  {
+    id: 8496202,
+    name: 'Ashok Ahluwalia',
+    email: 'ashok_ahluwalia@hudson-hilpert.example',
+    gender: 'male',
+    status: 'active'
+  }
+]

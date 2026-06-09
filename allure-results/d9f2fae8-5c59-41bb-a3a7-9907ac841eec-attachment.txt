@@ -1,0 +1,72 @@
+[
+  {
+    id: 8499057,
+    name: 'nikhil',
+    email: 'nikhil1781022410312@gmail.com',
+    gender: 'male',
+    status: 'active'
+  },
+  {
+    id: 8499042,
+    name: 'nikhil',
+    email: 'nikhil1781021592796@gmail.com',
+    gender: 'male',
+    status: 'inactive'
+  },
+  {
+    id: 8499054,
+    name: 'nikhil',
+    email: 'nikhil1781022229554@gmail.com',
+    gender: 'male',
+    status: 'active'
+  },
+  {
+    id: 8499052,
+    name: 'nikhil',
+    email: 'nikhil1781022112763@gmail.com',
+    gender: 'male',
+    status: 'active'
+  },
+  {
+    id: 8499050,
+    name: 'nikhil',
+    email: 'nikhil1781022055791@gmail.com',
+    gender: 'male',
+    status: 'active'
+  },
+  {
+    id: 8499048,
+    name: 'nikhil',
+    email: 'nikhil1781022007245@gmail.com',
+    gender: 'male',
+    status: 'active'
+  },
+  {
+    id: 8499041,
+    name: 'nikhil',
+    email: 'nikhil1781021566877@gmail.com',
+    gender: 'male',
+    status: 'active'
+  },
+  {
+    id: 8499040,
+    name: 'nikhil',
+    email: 'nikhil1781021565438@gmail.com',
+    gender: 'male',
+    status: 'active'
+  },
+  {
+    id: 8498863,
+    name: 'nikhil',
+    email: 'jbhfksdjhf@gmail.com',
+    gender: 'female',
+    status: 'active'
+  },
+  {
+    id: 8498845,
+    name: 'Avani Iyer',
+    email: 'avaccni.iyer@example.com',
+    gender: 'female',
+    status: 'active'
+  }
+]

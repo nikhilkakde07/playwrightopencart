@@ -1,5 +1,5 @@
 import {Page,expect,Locator} from "@playwright/test"
-import { error } from "node:console"
+
 
 export class HomePage{
 //In this we will have 3 things 1.locators,2.constructors,3.action methods

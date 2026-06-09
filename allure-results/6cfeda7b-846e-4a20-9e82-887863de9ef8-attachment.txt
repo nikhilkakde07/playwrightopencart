@@ -1,0 +1,24 @@
+{
+  id: 8499252,
+  name: 'Nikhil',
+  email: 'nikhil1781029171064@gmail.com',
+  gender: 'male',
+  status: 'active'
+}
+Crearted user:8499252
+========================get call=====================
+{
+  id: 8499252,
+  name: 'Nikhil',
+  email: 'nikhil1781029171064@gmail.com',
+  gender: 'male',
+  status: 'active'
+}
+=============================put call==============================
+{
+  id: 8499252,
+  name: 'nikhkakde',
+  email: 'nikhil1781029171064@gmail.com',
+  gender: 'male',
+  status: 'inactive'
+}

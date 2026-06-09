@@ -1,0 +1,8 @@
+{
+  id: 8499084,
+  name: 'nikhil',
+  email: 'nikhil1781023664411@gmail.com',
+  gender: 'male',
+  status: 'active'
+}
+Created User ID:8499084
